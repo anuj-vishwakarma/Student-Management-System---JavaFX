@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="studentmanagementsystem.NewController"
+            prefHeight="554.4" prefWidth="896.8"
+            stylesheets="@dashboardDesign.css"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <children>
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="554.4" prefWidth="896.8">
+            <children>
+                <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="554.4" prefWidth="896.8" style="-fx-background-color: #dadada;">
+                    <children>
+                        <ComboBox fx:id="selectSubject" layoutX="258.0" layoutY="14.0" prefWidth="150.0" promptText="Operating System" />
+                        <Label layoutX="143.0" layoutY="19.0" text="Select the subject">
+                            <font>
+                                <Font name="Tahoma" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="545.0" layoutY="18.0" text="Select Date">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="date_picker" layoutX="614.0" layoutY="14.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="0.0" layoutY="61.0" prefHeight="493.0" prefWidth="897.0">
+                    <children>
+                        <TableView fx:id="takeAttendanceTable" layoutX="98.0" layoutY="1.0" onMouseClicked="#availableCourseSelect" prefHeight="430.0" prefWidth="834.0">
+                            <columns>
+                                <TableColumn fx:id="classRollNumber_col" prefWidth="144.0" text="Class Roll Number" />
+                                <TableColumn fx:id="examRollNumber_col" prefWidth="224.8" text="Exam Roll Number" />
+                                <TableColumn fx:id="studentName_col" prefWidth="288.8" text="Student Name" />
+                                <TableColumn fx:id="attendanceStatus_col" prefWidth="241.6" text="Attendance Status" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="showAttendanceRecord" layoutX="519.0" layoutY="446.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" text="Show Attendance Record" />
+                        <Button fx:id="saveAtrtendance_btn1" layoutX="716.0" layoutY="446.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" text="Save Attendance" />
+                        <Button fx:id="updateStudentAttendance" layoutX="321.0" layoutY="446.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="162.0" text="Update Attendance" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

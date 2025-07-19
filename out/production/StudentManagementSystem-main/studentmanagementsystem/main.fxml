@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signin_signup_root_pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 30px; -fx-border-radius: 30px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentmanagementsystem.loginSignUpController">
+   <children>
+      <Pane fx:id="credentials_container" layoutY="1.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-background-radius: 30px; -fx-border-radius: 30px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane fx:id="signup_container" layoutX="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #00bb73; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #00bb73; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0 0, 0);">
+               <effect>
+                  <Blend opacity="0.0" />
+               </effect>
+               <children>
+                  <Label layoutX="133.0" layoutY="49.0" prefHeight="50.0" prefWidth="249.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Create Account" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signup_field_username" layoutX="175.0" layoutY="272.0" prefHeight="28.0" prefWidth="279.0" promptText="Create a User Name" style="-fx-background-radius: 5px; -fx-background-color: transparent; -fx-border-radius: 5px; -fx-background-color: #EEEEEE; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Nirmala UI" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="signup_field_email" layoutX="175.0" layoutY="312.0" prefHeight="28.0" prefWidth="279.0" promptText="Enter your email" style="-fx-background-radius: 5px; -fx-background-color: transparent; -fx-border-radius: 5px; -fx-background-color: #EEEEEE; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Nirmala UI" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="176.0" layoutY="232.0" prefHeight="21.0" prefWidth="149.0" style="-fx-font-weight: 700; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Register with Email" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="signup_field_password" layoutX="175.0" layoutY="353.0" prefHeight="28.0" prefWidth="279.0" promptText="Enter your password" style="-fx-background-radius: 5px; -fx-background-color: transparent; -fx-border-radius: 5px; -fx-background-color: #EEEEEE; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <font>
+                        <Font name="Nirmala UI" size="13.0" />
+                     </font>
+                  </PasswordField>
+                  <ToggleButton fx:id="signup_button" layoutX="175.0" layoutY="409.0" mnemonicParsing="false" onAction="#signUpAdmin" onMouseEntered="#handleMouseEnteredSignUp" onMouseExited="#handleMouseExitedSignUp" prefHeight="34.0" prefWidth="149.0" style="-fx-border-color: transparent; -fx-border-radius: 1px; -fx-background-radius: 1px; -fx-content-display: center; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="SIGN UP" textFill="#00bb73">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Pane layoutX="289.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <children>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/twitter%20(1).png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="227.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <children>
+                        <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Blend />
+                           </effect>
+                           <image>
+                              <Image url="@icons/google.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="168.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Blend />
+                           </effect>
+                           <image>
+                              <Image url="@icons/linkedin%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+                     </effect>
+                  </Pane>
+                  <Label layoutX="59.0" layoutY="274.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="314.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Email" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="356.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="close_button1" layoutX="453.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fx:id="cluse_button_image1" fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/cross-black.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="minimize_button1" layoutX="407.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fx:id="minimize_button_image" fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/minimize-black.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="welcome_toggle_left" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: white;">
+               <children>
+                  <ToggleButton fx:id="signin_button" layoutX="172.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleSignIn" onMouseEntered="#handleMouseEnteredSignIn" onMouseExited="#handleMouseExitedSignIn" prefHeight="34.0" prefWidth="156.0" style="-fx-border-color: transparent; -fx-border-radius: 1px; -fx-background-radius: 1px; -fx-content-display: center; -fx-background-color: #00e08e; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="SIGN IN" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Label contentDisplay="CENTER" layoutX="92.0" layoutY="282.0" prefHeight="50.0" prefWidth="322.0" text="Student Management App" textAlignment="CENTER">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="182.0" layoutY="250.0" prefHeight="50.0" prefWidth="156.0" text="Welcome To">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="368.0" prefHeight="21.0" prefWidth="278.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 0);" text="       Sign In with Username and Password" />
+                  <ImageView fitHeight="186.0" fitWidth="391.0" layoutX="98.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/people-planning.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="122.0" fitWidth="287.0" layoutX="110.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/background-homepage.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="welcome_toggle_right" layoutX="593.0" layoutY="930.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: white;">
+         <children>
+            <ToggleButton fx:id="signup_button_1" layoutX="172.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="34.0" prefWidth="156.0" style="-fx-border-color: transparent; -fx-border-radius: 1px; -fx-background-radius: 1px; -fx-content-display: center; -fx-background-color: #00e08e; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="SIGN UP" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Nirmala UI Bold" size="15.0" />
+               </font>
+            </ToggleButton>
+            <Label contentDisplay="CENTER" layoutX="92.0" layoutY="282.0" prefHeight="50.0" prefWidth="322.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7 0, 0, 0);" text="Student Management App" textAlignment="CENTER">
+               <font>
+                  <Font name="Nirmala UI Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="182.0" layoutY="250.0" prefHeight="50.0" prefWidth="156.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7 0, 0, 0);" text="Welcome To">
+               <font>
+                  <Font name="Nirmala UI Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="360.0" prefHeight="21.0" prefWidth="262.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 0);" text="           Sign Up with Email Account" />
+            <ImageView fitHeight="186.0" fitWidth="391.0" layoutX="98.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/people-planning.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="122.0" fitWidth="287.0" layoutX="110.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/background-homepage.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="minimize_button2" layoutX="396.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="minimize_button_image2" fitHeight="27.0" fitWidth="34.0" onDragDetected="#minimize" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/minimize-black.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="close_button2" layoutX="442.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="cluse_button_image2" fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@icons/cross-black.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </Pane>
+      <Pane fx:id="login_container" layoutX="-41.0" layoutY="930.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #00bb73; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #00bb73; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+         <children>
+            <Label layoutX="189.0" layoutY="47.0" prefHeight="50.0" prefWidth="117.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username_signin_field" layoutX="169.0" layoutY="293.0" prefHeight="28.0" prefWidth="279.0" promptText="Enter email or username" style="-fx-background-radius: 5px; -fx-background-color: transparent; -fx-border-radius: 5px; -fx-background-color: #EEEEEE; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+               <font>
+                  <Font name="Nirmala UI" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="168.0" layoutY="248.0" prefHeight="21.0" prefWidth="227.0" style="-fx-font-weight: 700; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Sign In with Emai &amp; Password" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password_signin_field" layoutX="169.0" layoutY="334.0" prefHeight="28.0" prefWidth="279.0" promptText="Enter password" style="-fx-background-radius: 5px; -fx-background-color: transparent; -fx-border-radius: 5px; -fx-background-color: #EEEEEE; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+               <font>
+                  <Font name="Nirmala UI" size="13.0" />
+               </font>
+            </PasswordField>
+            <ToggleButton fx:id="signin_user_button" layoutX="170.0" layoutY="398.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="34.0" prefWidth="156.0" style="-fx-border-color: transparent; -fx-border-radius: 1px; -fx-background-radius: 1px; -fx-content-display: center; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="SIGN IN" textFill="#00bb73">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Nirmala UI Bold" size="15.0" />
+               </font>
+            </ToggleButton>
+            <Pane layoutX="289.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+               <children>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <image>
+                        <Image url="@icons/twitter%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="227.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <image>
+                        <Image url="@icons/google.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="168.0" layoutY="128.0" prefHeight="41.0" prefWidth="41.0" style="-fx-border-radius: 50%; -fx-border-color: white; -fx-background-color: white; -fx-background-radius: 50%; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <image>
+                        <Image url="@icons/linkedin%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow color="#40bc65" radius="8.5" width="15.0" />
+               </effect>
+            </Pane>
+            <Label layoutX="53.0" layoutY="295.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="337.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
