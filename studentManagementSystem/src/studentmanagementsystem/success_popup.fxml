@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root_success_popup_pane" prefHeight="627.0" prefWidth="963.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentmanagementsystem.SuccessPopupController">
+   <children>
+      <AnchorPane fx:id="popup_username_valid" layoutX="180.0" layoutY="145.0" prefHeight="321.0" prefWidth="600.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);">
+         <children>
+            <Button fx:id="success_button_ok" layoutX="119.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleClose" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="37.0" prefWidth="361.0" style="-fx-background-color: #0dd98e; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 7, 0, 0, 0);" text="OK" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Nirmala UI Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="89.0" fitWidth="116.0" layoutX="246.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/success_logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="success_popup_label" layoutX="158.0" layoutY="173.0" prefHeight="25.0" prefWidth="297.0" style="-fx-font-weight: 600; -fx-content-display: right;" text="Account created, you can now sign in." textAlignment="CENTER" textFill="#686868" textOverrun="CLIP">
+               <font>
+                  <Font name="Nirmala UI" size="16.0" />
+               </font>
+            </Label>
+            <Pane fx:id="success_popup_pane" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="37.0" prefWidth="600.0" style="-fx-background-color: #00bb73;">
+               <children>
+                  <Button fx:id="success_popup_close_button" layoutX="552.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleClose" style="-fx-background-color: transparent;" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="cluse_button_image1" fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@icons/cross-black.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="269.0" style="-fx-font-weight: 600;" text="Attendance Mangement System" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button fx:id="myButton" disable="true" layoutX="93.0" layoutY="88.0" mnemonicParsing="false" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" style="-fx-background-color: skyblue;" text="Button" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
